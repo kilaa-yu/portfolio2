@@ -1,0 +1,272 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Le html et body à 100% de hauteur */
+html, body {
+    height: 100%;
+}
+
+/* Le conteneur principal pour la mise en page en flex */
+.wrapper {
+    min-height: 100vh;           /* Prend la pleine hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;      /* Empile header, main, footer à la verticale */
+}
+
+/* Le main qui s'étire pour prendre la place disponible */
+main {
+    flex: 1;                     /* Prend l'espace restant pour "pousser" le footer en bas */
+    max-width: 1100px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ccc;
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Hero (page d'accueil) */
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+}
+
+/* Projets */
+.projet-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.projet-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 5px;
+    /* Ajout pour animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Animation au survol de la carte */
+.projet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Compétences */
+.competences-section .competence-block {
+    border-left: 3px solid #000;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* CV */
+.cv-section {
+    margin-top: 2rem;
+}
+
+.cv-block {
+    margin-bottom: 2rem;
+}
+
+.cv-block h2 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+}
+
+.cv-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.cv-left {
+    flex: 1 1 300px;
+    margin-right: 1rem;
+}
+
+.cv-right {
+    flex: 1 1 300px;
+}
+
+/* Contact */
+.contact-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-icons {
+    margin: 1rem 0;
+}
+
+.contact-icons a img {
+    width: 40px;
+    margin: 0 10px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.contact-icons a img:hover {
+    opacity: 0.7;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    /* Pas besoin de position: fixed; si on utilise la méthode flex pour un sticky footer */
+}
+
+.projet-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.projet-description p {
+    margin-bottom: 1rem; /* Espace après chaque paragraphe */
+}
+
+.projet-illustration {
+    margin: 2rem 0;      /* Espace autour de la figure */
+    text-align: center;  /* Centrer éventuellement l'image */
+}
+
+.projet-illustration img {
+    max-width: 100%;     /* Pour qu’elle s’adapte à la largeur du conteneur */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.projet-illustration figcaption {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ----- Accordéon ----- */
+.accordion {
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden; /* Pour que le contenu soit masqué correctement */
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: #f6f6f6;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordion-content {
+    max-height: 0;  /* On masque le contenu par défaut */
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p,
+.accordion-content h3 {
+    margin: 1rem 0; /* Espacement interne */
+}
+
+/* Quand l’item est "active", on affiche le contenu */
+.accordion-item.active .accordion-content {
+    max-height: 1000px; /* Valeur arbitraire suffisamment grande pour tout montrer */
+    padding: 1rem;
+}
+
+.accordion-item.active .accordion-header {
+    background-color: #ddd;
+}

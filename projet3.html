@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Projet 1 - Mon Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Yûki SALA-MOCHIZUKI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section style="max-width: 800px; margin: 0 auto;">
+            <div class="projet-description">
+                <p>
+                    <strong>Technologies utilisées :</strong>
+                    HTML, CSS, JavaScript, [Framework], [Base de données], Docker, etc.
+                </p>
+                <p>
+                    <strong>Rôle :</strong> Développeur Full-Stack et Administrateur Cloud </p>
+                <p> <strong>Fonctionnalités clés :</strong> Authentification, gestion de profils, intégration
+                    d’un service de paiement, etc.
+                </p>
+            </div>
+
+            <h2 style="margin: 2rem 0 1rem;">Contexte du projet</h2>
+            <p style="margin-bottom: 1rem;">
+                Il s’agit d’un projet d’étude réalisé au troisième semestre du BUT Informatique,
+                entre le 23 septembre 2023 et le 12 janvier 2024, en parallèle des cours. Nous étions
+                cinq étudiants travaillant en équipe pour créer un ensemble d’applications d’enchères
+                sécurisées baptisées <strong>SecureWin</strong>.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                Dans cette mise en situation professionnelle, nous avions un client fictif,
+                <strong>Fabien LAGUILLAUMIE</strong>, accompagné d’<strong>Antoine CHOLLET</strong>
+                pour la partie management. Nous avons appliqué la méthodologie agile <em>Scrum</em>,
+                avec un découpage du projet en quatre sprints.
+            </p>
+
+            <h2 style="margin: 2rem 0 1rem;">Équipe et méthodologie</h2>
+            <p style="margin-bottom: 1rem;">
+                L’équipe se composait de cinq développeurs : <strong>Paul JACQUEMIN</strong>,
+                <strong>Rémi VACHALDE</strong>, <strong>Loan TREMOULET-BRETON</strong>,
+                <strong>Katia AUXILIEN</strong> (notre Product Owner) et moi-même,
+                <strong>Yûki SALA-MOCHIZUKI</strong>, Scrum Master et Développeur.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                Au début de chaque sprint, nous prenions en compte les nouvelles exigences
+                du client. Nous organisions trois <em>Stand-up Meetings</em> par semaine
+                pour assurer une communication fluide et un suivi régulier. En fin de sprint,
+                nous présentions les fonctionnalités réalisées et menions une
+                <em>Sprint Review</em> afin de faire le point sur les éléments positifs,
+                négatifs et les pistes d’amélioration pour la suite.
+            </p>
+
+            <h2 style="margin: 2rem 0 1rem;">Les applications SecureWin</h2>
+            <p style="margin-bottom: 1rem;">
+                Nous avons développé en Java des applications d’enchères sécurisées à pli
+                fermé, basées sur le système de William Vickrey. Trois applications
+                principales ont vu le jour :
+            </p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li><strong>SecureWin : Manager</strong> (pour les employés de confiance de l'entreprise).</li>
+                <li><strong>SecureWin : Bidder</strong> (pour les enchérisseurs).</li>
+                <li><strong>SecureWin : Seller</strong> (pour les vendeurs créant leurs enchères).</li>
+            </ul>
+            <p style="margin-bottom: 1rem;">
+                Les points cruciaux de ces applications incluent des échanges réseau
+                sécurisés (grâce à l’intégration de sockets sécurisés),
+                une authentification robuste via des signatures cryptographiques
+                (RSA combiné à AES256), la confidentialité des prix proposés
+                (les enchères sont chiffrées), ainsi qu’une persistance des signatures
+                (fichiers <code>.jks</code> et <code>.ces</code> permettant de conserver
+                les clés secrètes/publics pour de futures enchères).
+                Enfin, l’interface se veut la plus simple possible pour les utilisateurs.
+            </p>
+
+            <h2 style="margin: 2rem 0 1rem;">Mon rôle : Scrum Master & Développeur</h2>
+            <p style="margin-bottom: 1rem;">
+                En tant que Scrum Master, j’ai organisé les <em>Stand-up Meetings</em>
+                (trois par semaine) afin de suivre l’avancement de chacun et de lever
+                rapidement les obstacles. J’ai veillé au respect du cadre Scrum
+                (plannings de sprint, rétrospectives, échanges avec le client, etc.)
+                et à la bonne communication au sein de l’équipe.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                Mon rôle de Développeur m’a conduit à participer activement
+                à la conception et à l’implémentation des fonctionnalités clés
+                de SecureWin, notamment l’intégration des protocoles de chiffrement
+                (RSA et AES256) et la mise en place des sockets sécurisés. J’ai
+                également collaboré avec les autres membres de l’équipe pour
+                la gestion des erreurs et l’amélioration de l’expérience utilisateur.
+            </p>
+
+            <h2 style="margin: 2rem 0 1rem;">Conclusion</h2>
+            <p style="margin-bottom: 1rem;">
+                Ci-dessous, vous trouverez une vidéo de démonstration des applications
+                avec un seul enchérisseur pour illustrer le fonctionnement. Cependant,
+                le système prend tout autant en charge plusieurs enchérisseurs
+                sur différents postes.
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Mon Portfolio</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projet 1 - Mon Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Yûki SALA-MOCHIZUKI</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projet-detail">
+      <h1>Automatisation & Script</h1>
+
+      <!-- Description approfondie : texte aéré -->
+      <div class="projet-description">
+        <p>
+          Dans le cadre de la ressource R5.06, j’ai réalisé un projet visant à automatiser l’installation et la configuration de plusieurs services essentiels dans un environnement Linux. L’objectif était de mettre en place un environnement fonctionnel comprenant Apache pour le serveur web, PHP pour l’exécution de scripts côté serveur, MySQL pour la gestion des bases de données, et phpMyAdmin pour une interface d’administration web. J’ai également ajouté une page sécurisée avec un accès restreint à l’aide de fichiers .htaccess et .htpasswd, et sécurisé l’ensemble des communications via HTTPS grâce à un certificat auto-signé.
+        </p>
+        <p>
+          Le projet a été réalisé en deux versions distinctes. La version principale, basée sur une installation baremetal, installe directement les services sur une machine Linux fraîche. Cette version repose sur un script d’installation robuste et interactif. Ce script vérifie d’abord si des services tels qu’Apache, MySQL ou phpMyAdmin sont déjà installés sur le système. Si c’est le cas, il suggère à l’utilisateur d’exécuter un script de désinstallation fourni pour éviter tout conflit. Ensuite, il installe les services nécessaires, configure MySQL pour sécuriser l’accès, crée un utilisateur dédié, et met en place les alias nécessaires pour accéder à phpMyAdmin depuis le navigateur.
+
+        </p>
+        <figure class="projet-illustration">
+          <img src="images/projet1-screenshot.png" alt="Capture d'écran du projet 1" />
+          <figcaption>Interface principale de l’application Web.</figcaption>
+        </figure>
+        <p>L’installation inclut également des fonctionnalités de personnalisation et de sécurisation. La page par défaut d’Apache a été remplacée par une version modifiée qui affiche des liens vers phpMyAdmin et une page de test sécurisée. Cette dernière est protégée par une authentification HTTP, nécessitant un nom d’utilisateur et un mot de passe définis par l’utilisateur lors de l’installation. Le script configure également un accès HTTPS en générant un certificat auto-signé, puis ajoute ce certificat aux autorités de certification de confiance du système, garantissant une navigation sécurisée.
+        </p>
+        <p>En parallèle, j’ai développé une version Docker de ce projet. Cette version permet de déployer les mêmes services à l’aide de conteneurs, orchestrés avec docker-compose. Les conteneurs sont isolés, chacun ayant son rôle distinct : Apache avec PHP, MySQL, et phpMyAdmin. Cette approche permet une gestion modulaire des services et facilite leur déploiement sur différentes machines. Les identifiants et mots de passe nécessaires à la configuration sont gérés via un fichier .env pour éviter de les hardcoder. Cette version met également en place un accès HTTPS pour le conteneur Apache, tout en s’assurant que phpMyAdmin reste accessible en toute sécurité.
+        </p>
+        <p>Un script de désinstallation complète ce projet. Il permet de supprimer proprement les services installés, de réinitialiser les configurations modifiées, et de nettoyer les fichiers générés, comme les certificats SSL. Cette fonctionnalité garantit une réversibilité totale des actions, rendant le projet particulièrement adapté à des environnements de test ou de formation.</p>
+        <p>
+          En travaillant sur ce projet, j’ai pu approfondir mes compétences en administration système, notamment dans l’automatisation de tâches complexes avec Bash, la gestion des permissions dans MySQL, et la sécurisation des services web avec HTTPS et authentification. La version Docker m’a permis d’explorer l’orchestration de conteneurs, renforçant ainsi ma capacité à travailler avec des outils modernes de déploiement.
+        </p>
+        <p>Ce projet illustre une double approche de la gestion des services, combinant l’installation baremetal traditionnelle avec les avantages de la conteneurisation. Il répond aux objectifs pédagogiques de R5.06 en démontrant ma capacité à installer, configurer et sécuriser des services complexes tout en les rendant facilement reproductibles et administrables.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Mon Portfolio</p>
+  </footer>
+</div>
+</body>
+</html>

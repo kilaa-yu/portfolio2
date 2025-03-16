@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projet 1 - Mon Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Yûki SALA-MOCHIZUKI</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projet-detail">
+      <div class="projet-description">
+        <p>
+          <strong>Technologies utilisées :</strong>
+          Python, Tkinter, Socket, JSON, Threading.
+        </p>
+        <p>
+          <strong>Rôle :</strong> Développeur et concepteur</p>
+      </div>
+      <h1>Application de Sauvegarde Client-Serveur</h1>
+
+      <!-- Description approfondie : texte aéré -->
+      <div class="projet-description">
+        <p>Ce projet est une solution de sauvegarde externalisée conçue pour simplifier la gestion des fichiers de l’utilisateur. Grâce à un fonctionnement en réseau, il permet de sélectionner un dossier, d’identifier les fichiers pertinents et de les transférer vers un serveur distant de manière optimisée.</p>
+
+        <p>Côté client, une interface graphique intuitive facilite l’expérience utilisateur en permettant une sélection rapide du dossier à sauvegarder. Seuls les fichiers répondant à certains critères prédéfinis sont pris en compte, garantissant une gestion efficace des données. Pour éviter les doublons, l’application vérifie si une première sauvegarde a déjà été effectuée et ne transmet que les fichiers nouveaux ou modifiés.</p>
+
+        <p>Le serveur assure le stockage sécurisé des fichiers et tient un registre des sauvegardes, permettant ainsi une gestion optimisée. Il prend en charge la sauvegarde incrémentale en s’appuyant sur l’empreinte numérique des fichiers, garantissant ainsi une mise à jour précise du contenu sauvegardé. La communication entre le client et le serveur repose sur un protocole robuste qui assure la fiabilité des transferts.</p>
+
+        <p>La structure du projet a été pensée pour être modulaire et évolutive. L’architecture multi-threading permet au serveur de gérer plusieurs connexions simultanément, assurant de bonnes performances même en cas d’usage intensif. L’ensemble repose sur un système de logs et une configuration centralisée pour faciliter la maintenance et l’évolution future du projet.</p>
+
+        <p>Cette application apporte une solution efficace et automatisée pour la sauvegarde de fichiers, tout en garantissant une expérience fluide et sécurisée pour l’utilisateur.</p>
+
+        <p><strong>Technologies Utilisées</strong></p>
+
+        <ul>
+          <li><strong>Python</strong> : Langage principal pour la logique client-serveur.</li>
+          <li><strong>Tkinter</strong> : Interface graphique pour le client.</li>
+          <li><strong>Socket</strong> : Communication réseau entre client et serveur.</li>
+          <li><strong>JSON</strong> : Stockage des métadonnées de sauvegarde.</li>
+          <li><strong>Threading</strong> : Gestion des connexions multiples côté serveur.</li>
+        </ul>
+
+        <figure class="projet-illustration">
+          <img src="images/diagramme_appsave.png" alt="Diagramme de l'application" />
+          <figcaption>Diagramme de l'application</figcaption>
+        </figure>
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Mon Portfolio</p>
+  </footer>
+</div>
+</body>
+</html>

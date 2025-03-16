@@ -270,3 +270,12 @@ footer {
 .accordion-item.active .accordion-header {
     background-color: #ddd;
 }
+
+.video-resize {
+    max-width: 80%; /* Ajuste la largeur à 80% de l'écran */
+    height: auto; /* Maintient le ratio d'aspect */
+    display: block;
+    margin: 0 auto; /* Centre la vidéo */
+}
+
+
